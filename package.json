@@ -1,0 +1,50 @@
+{
+  "name": "vpn-manager",
+  "version": "1.0.0",
+  "description": "Algo VPN Manager",
+  "main": "./www/main.js",
+  "scripts": {
+    "start": "electron ./www/main.js",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "RichyanVPN"
+  ],
+  "author": "Richyan",
+  "license": "",
+  "devDependencies": {
+    "electron": "^3.1.13",
+    "electron-builder": "^20.4.1"
+  },
+  "build": {
+    "appId": "com.richyan.vpn",
+    "win": {
+      "icon": "resources/icon.ico",
+      "extraResources": [
+        "resources"
+      ],
+      "requestedExecutionLevel": "requireAdministrator",
+      "signAndEditExecutable": true,
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "runAfterFinish": true,
+      "createDesktopShortcut": true,
+      "allowElevation": true,
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "node-powershell": "^3.3.1",
+    "roboto-fontface": "^0.10.0"
+  }
+}
