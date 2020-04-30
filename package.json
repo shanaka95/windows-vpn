@@ -43,7 +43,7 @@
     }
   },
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "node-powershell": "^3.3.1",
     "roboto-fontface": "^0.10.0"
   }
